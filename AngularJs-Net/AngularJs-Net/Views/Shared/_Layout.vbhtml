@@ -8,23 +8,38 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+
     <header>
         <div class="content-wrapper">
             <div class="float-left">
                 <p class="site-title">
-                    <a href="~/">ASP.NET Web API</a></p>
+                    <a href="~/">Asp.Net ve AngularJs</a>
+                </p>
             </div>
             <div class="float-right">
                 <nav>
                     <ul id="menu">
-                        <li>@Html.ActionLink("Home", "Index", "Home", New with { .area = "" }, Nothing)</li>
-                        <li>@Html.ActionLink("API", "Index", "Help", New with { .area = "" }, Nothing)</li>
+                        <li><a href="https://github.com/bbilginn/AngularJs.Net"><img src="~/Images/github.png" /></a></li>
+                        @*<li>@Html.ActionLink("API", "Index", "Help", New With {.area = ""}, Nothing)</li>*@
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    @RenderBody()
+
+    <div id="body">
+        <section class="featured">
+            <div class="content-wrapper">
+                <hgroup class="title">
+                    <h1>VB.Net ile AngularJs Uygulaması</h1>
+                </hgroup>
+
+            </div>
+        </section>
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
 
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required:=False)
