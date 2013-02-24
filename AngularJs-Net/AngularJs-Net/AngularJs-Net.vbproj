@@ -298,6 +298,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Images\github-down.png" />
+    <Content Include="Images\github.png" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

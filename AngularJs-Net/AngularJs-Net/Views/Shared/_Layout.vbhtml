@@ -19,7 +19,8 @@
             <div class="float-right">
                 <nav>
                     <ul id="menu">
-                        <li><a href="https://github.com/bbilginn/AngularJs.Net"><img src="~/Images/github.png" /></a></li>
+                        <li><a href="https://github.com/bbilginn/AngularJs.Net"><img src="~/Images/github.png" alt="AngularJs.Net Vb.Net Sample" /></a></li>
+                        <li><a href="https://github.com/bbilginn/AngularJs.Net/archive/master.zip"><img src="~/Images/github-down.png" alt="AngularJs.Net Vb.Net Sample Download" /></a></li>
                         @*<li>@Html.ActionLink("API", "Index", "Help", New With {.area = ""}, Nothing)</li>*@
                     </ul>
                 </nav>
