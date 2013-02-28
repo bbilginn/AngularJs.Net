@@ -1,4 +1,4 @@
-﻿<div ng-controller="ArsivController">
+﻿<div ng-controller="SanatciController">
 
     <p>Film Sayısı : {{Sanatcilar.length}}</p>
 
@@ -12,14 +12,14 @@
         </tr>
         <tr ng-repeat="item in Sanatcilar">
             <td style="width:65%">{{item.Ad}}</td>
-            <td>0</td>
+            <td>{{item.Albums.length}}</td>
             <td><a href="#" ng-click="SanatciDetay($index)">Detay</a> | <a href="#" ng-click="SanatciDuzenle($index)">Düzenle</a> | <a href="#" ng-click="SanatciSil($index)">Sil</a></td>
         </tr>
     </table>
 
 
     <form ng-submit="SanatciKaydet()">
-        Ad :
+        <p><h3>Sanatçı Adı</h3></p>
         <input type="text" ng-model="Ad" /><br>
         <input type="submit" value="Kaydet">
         <input type="button" value="Vazgeç" ng-click="YeniSanatciIptal()">

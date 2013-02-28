@@ -7,16 +7,9 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
-
     <script src="~/Scripts/angular.min.js"></script> @*Angularjs kütüphanesini projemize referans ediyoruz.*@
-    <script src="~/Models/Context.js"></script> @*Angularjs kapsamında olan "Controller mekanizması ve model diyeyim" sayfaya dahil ediyoruz.*@
+    <script src="~/App/Cortollers/SanatciController.js"></script> @*Angularjs kapsamında olan Controller mekanizması sayfaya dahil ediyoruz.*@
 
-
-    <style>
-        form {
-            display: none;
-        }
-    </style>
 </head>
 <body>
 
