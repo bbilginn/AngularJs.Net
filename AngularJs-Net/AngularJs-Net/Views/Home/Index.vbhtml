@@ -1,6 +1,6 @@
 ﻿<div ng-controller="SanatciController">
 
-    <p>Toplam : {{Sanatcilar.length}}</p>
+    <p>Sayfada {{Sanatcilar.length}} sanatçı bulunmaktadır.</p>
 
     [<a href="#" ng-click="YeniSanatci()">Yeni Sanatçı</a>]
 
@@ -13,7 +13,7 @@
         <tr ng-repeat="item in Sanatcilar">
             <td style="width:65%">{{item.Ad}}</td>
             <td>{{item.Albums.length}}</td>
-            <td><a href="#" ng-click="SanatciDetay($index)">Detay</a> | <a href="#" ng-click="SanatciDuzenle($index)">Düzenle</a> | <a href="#" ng-click="SanatciSil($index)">Sil</a></td>
+            <td><a href="#" ng-click="SanatciDetay($index)">Detay</a> | <a href="#" ng-click="SanatciDuzenle($index)">Düzenle</a> | <a href="#" ng-click="SanatciSil(item._id, $index)">Sil</a></td>
         </tr>
     </table>
 
