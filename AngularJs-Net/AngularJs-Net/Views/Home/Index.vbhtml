@@ -1,22 +1,28 @@
-﻿<h3>We suggest the following steps:</h3>
-<ol class="round">
-    <li class="one">
-        <h5>Getting Started</h5>
-        ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-                a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-                is an ideal platform for building RESTful applications on the .NET Framework.
-                <a href="http://go.microsoft.com/fwlink/?LinkId=245160">Learn more…</a>
-    </li>
+﻿<div ng-controller="ArsivController">
 
-    <li class="two">
-        <h5>Add NuGet packages and jump-start your coding</h5>
-        NuGet makes it easy to install and update free libraries and tools.
-                <a href="http://go.microsoft.com/fwlink/?LinkId=245161">Learn more…</a>
-    </li>
-    <li class="three">
-        <h5>Find Web Hosting</h5>
-        You can easily find a web hosting company that offers the right mix of features
-                and price for your applications.
-                <a href="http://go.microsoft.com/fwlink/?LinkId=245164">Learn more…</a>
-    </li>
-</ol>
+    <p>Film Sayısı : {{Sanatcilar.length}}</p>
+
+    [<a href="#" ng-click="YeniSanatci()">Yeni Sanatçı</a>]
+
+    <table>
+        <tr>
+            <th>Ad</th>
+            <th>Album</th>
+            <th>İşlemler</th>
+        </tr>
+        <tr ng-repeat="item in Sanatcilar">
+            <td style="width:65%">{{item.Ad}}</td>
+            <td>0</td>
+            <td><a href="#" ng-click="SanatciDetay($index)">Detay</a> | <a href="#" ng-click="SanatciDuzenle($index)">Düzenle</a> | <a href="#" ng-click="SanatciSil($index)">Sil</a></td>
+        </tr>
+    </table>
+
+
+    <form ng-submit="SanatciKaydet()">
+        Ad :
+        <input type="text" ng-model="Ad" /><br>
+        <input type="submit" value="Kaydet">
+        <input type="button" value="Vazgeç" ng-click="YeniSanatciIptal()">
+    </form>
+
+</div>
