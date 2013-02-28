@@ -803,12 +803,5 @@ table {
             width: 10%;
         }
 
-form {
-    display: none;
-    text-align: center;
-    border: 1px solid #cccccc;
-}
-
-    form:hover {
-        background: #ffffcc;
-    }
+form {display: none; text-align: center; border: 1px solid #cccccc;}
+form:hover {background: #ffffcc;}
