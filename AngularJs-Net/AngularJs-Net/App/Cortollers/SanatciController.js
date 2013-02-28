@@ -7,8 +7,8 @@
         alert(status);
     });
 
-    $scope.SanatciSil = function (id, index) {
-        $http.delete("http://localhost:8651/api/values/" + id)
+    $scope.SanatciSil = function (_id, index) {
+        $http.delete("http://localhost:8651/api/values/" + _id)
         .success(function (data, status, headers, config) {
             $scope.Sanatcilar.splice(index, 1);
         }).error(function (data, status, headers, config) {
@@ -21,7 +21,7 @@
         if ($scope.Ad.length > 0) {
             $http.post("http://localhost:8651/api/values", { Ad: $scope.Ad, Albums: [] })
             .success(function (data, status, headers, config) {
-                $scope.Sanatcilar.push({ Ad: $scope.Ad, Albums: [] });
+                $scope.Sanatcilar.push({ _id: data.replace('"', "").replace('"', ""), Ad: $scope.Ad, Albums: [] });
                 FormSifirla();
             }).error(function (data, status, headers, config) {
                 alert(status);
