@@ -22,8 +22,13 @@
     $scope.SanatciKaydet = function () {
         //Post metoddan sonra
         if ($scope.Ad.length > 0) {
-            $scope.Sanatcilar.push({ Ad: $scope.Ad, Albums: [] });
-            FormSifirla();
+            $http.post("http://localhost:8651/api/values", { Ad: $scope.Ad, Albums: [] })
+            .success(function (data, status, headers, config) {
+                $scope.Sanatcilar.push({ Ad: $scope.Ad, Albums: [] });
+                FormSifirla();
+            }).error(function (data, status, headers, config) {
+                alert(status);
+            });
         }
     };
 
