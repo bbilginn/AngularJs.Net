@@ -1,6 +1,6 @@
 ﻿function SanatciController($scope, $http) {
 
-    $http.get("http://angularjs-net.azurewebsites.net/api/values")
+    $http.get("http://mongodb-net.azurewebsites.net/api/values")
     .success(function (data, status, headers, config) {
         $scope.Sanatcilar = data.Data;
     }).error(function (data, status, headers, config) {
@@ -8,7 +8,7 @@
     });
 
     $scope.SanatciSil = function (_id, index) {
-        $http.delete("http://angularjs-net.azurewebsites.net/api/values/" + _id)
+        $http.delete("http://mongodb-net.azurewebsites.net/api/values/" + _id)
         .success(function (data, status, headers, config) {
             $scope.Sanatcilar.splice(index, 1);
         }).error(function (data, status, headers, config) {
@@ -19,7 +19,7 @@
     $scope.SanatciKaydet = function () {
         //Post metoddan sonra
         if ($scope.Ad.length > 0) {
-            $http.post("http://angularjs-net.azurewebsites.net/api/values", { Ad: $scope.Ad, Albums: [] })
+            $http.post("http://mongodb-net.azurewebsites.net/api/values", { Ad: $scope.Ad, Albums: [] })
             .success(function (data, status, headers, config) {
                 $scope.Sanatcilar.push({ _id: data.replace('"', "").replace('"', ""), Ad: $scope.Ad, Albums: [] });
                 FormSifirla();
