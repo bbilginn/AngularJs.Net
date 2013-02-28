@@ -1,6 +1,6 @@
 ﻿<div ng-controller="SanatciController">
 
-    <p>Film Sayısı : {{Sanatcilar.length}}</p>
+    <p>Toplam : {{Sanatcilar.length}}</p>
 
     [<a href="#" ng-click="YeniSanatci()">Yeni Sanatçı</a>]
 
