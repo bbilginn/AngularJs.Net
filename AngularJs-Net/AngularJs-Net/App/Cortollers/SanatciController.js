@@ -39,4 +39,5 @@
         $scope.Ad = null;
         //$("form").fadeOut("slow");
     }
+
 }

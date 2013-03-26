@@ -17,7 +17,7 @@
         <div class="content-wrapper">
             <div class="float-left">
                 <p class="site-title">
-                    <a href="~/">Asp.Net ve AngularJs</a>
+                    <a href="~/">ASP.NET ve AngularJs</a>
                 </p>
             </div>
             <div class="float-right">
